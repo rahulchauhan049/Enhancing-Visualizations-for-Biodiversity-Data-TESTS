@@ -1,0 +1,52 @@
+Enhancing-Visualizations-for-Biodiversity-Data_Test
+================
+
+Required packages
+-----------------
+
+The following packages are required to perform all the analyses.
+
+``` r
+# loading packages, if not installed and installing them.
+
+pcakages <- c( "rgbif", "bdvis") # list of packages needed
+req_packages <- pcakages[!(pcakages %in% installed.packages()[, "Package"])] # checking if the exist
+if (length(req_packages) > 0) { # installing is needed
+  install.packages(req_packages, dependencies = TRUE)
+}
+#Display
+sapply(pcakages, require, character.only = TRUE)
+```
+
+Test Type: EASY
+---------
+
+Download 10,000 GBIF’s occurrence records of Mammals in the U.S (georeferenced records only), using the ‘rgbif’ R package.
+
+``` r
+#Downloading data from GBIF using rgbif
+key <- name_backbone(name = "Mammalia")$usageKey
+mammals <-occ_search(taxonKey = key,country = 'US', limit = 10000)
+
+# keeping only georeferenced records
+
+mammals_g <- mammals[!is.na(mammals$Latitude) & !is.na(mammals$Longitude),
+             c("Longitude", "Latitude")]
+
+```
+
+Test Type: Medium
+---------
+Build few visualizations in R with ‘bdvis’ that most effectively summarize the Mammals data you downloaded. Extra points for high aesthetics and creativity.
+
+
+
+
+
+
+
+
+
+
+
+
