@@ -39,10 +39,49 @@ Test Type: Medium
 ---------
 Build few visualizations in R with ‘bdvis’ that most effectively summarize the Mammals data you downloaded. Extra points for high aesthetics and creativity.
 
+**bdvis: Biodiversity Data Visualizations**
+
+First We need to convert the data in bdvis format.
+
+``` r
+inat=format_bdvis(mammals_g,source='rgbif')
+```
+
+Now Let us generate Map.
+``` r
+mapgrid(indf = inat, ptype = "records", title = "Mammals", legscale = 0, collow = "blue", colhigh = "red",
+        mapdatabase = "world", region = "US", gridscale = 1 )
+```
+
+![](Visulation_test_files/figure-markdown_github/map.png)
+
+For temporal visualization I used tempolar function. The data can be aggregated by day, week or month.
+
+``` r
+tempolar(inat, color="green", title="Mammals",
+         plottype="r", timescale="d")
+```
+![](Visulation_test_files/figure-markdown_github/d.png)
+
+``` r
+tempolar(inat, color="green", title="Mammals",
+         plottype="r", timescale="d")
+```
+![](Visulation_test_files/figure-markdown_github/w.png)
 
 
+``` r
+tempolar(inat, color="green", title="Mammals",
+         plottype="r", timescale="d")
+```
+![](Visulation_test_files/figure-markdown_github/m.png)
 
+Chronohorogram:This plots number of records on each day with colors indicating the value and concentric circles for each year.
 
+``` r
+chronohorogram(mammals) 
+```
+![](Visulation_test_files/figure-markdown_github/chronohorogram.png)
 
 
 
