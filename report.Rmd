@@ -1,0 +1,78 @@
+---
+title: "Different Visualizations for Biodiversity Data"
+output: html_document
+---
+
+There are many visualizations availble in R which can be used to represent data in graphical manner.
+
+It is always easier to understand data using visualizations. For example: Georeferenced record of specied can be visulaised using map. 
+'bdvis' is a famous tool that provide some visualization for biodiversity data.
+
+
+Here's report on different visualizations not covered in bdvis that can be used in biodiversity researches.
+
+
+
+##: Geographical DATA
+
+
+There are various ways to plot geographical data. Geographical Data includes Latitude and Longitude Data which can be plotted On maps.
+
+> Some ways of visualizing Geographical Data are Discussed below:
+
+**Heat Maps**
+
+In heat map, the area with more number of items become more red than other. It is great to visualise the population in a perticular area.
+
+![](Visulation_test_files\figure-markdown_github/heat.png)
+
+
+
+##: Data Which contain Temporal information
+
+bdvis Has 'temporal' function to plot time related Data. But there can also be other ways.
+
+> Some ways of visualizing Time Data are Discussed below:
+
+**1. Line Graph**
+
+A line Graph is the simplest way to represent time series data. Line Graph is easy to create, and helps the viewer get a qucik sense of how Something has changes over time.
+
+
+In biodiversity data, a line Graph can show how population chages over years.
+
+![](Visulation_test_files\figure-markdown_github/line.png) 
+
+
+**2.Bar Charts**
+
+Bar Charts represent data as horizontal or vertical bars. The length of each bar is proportional to the value of the variable at theat point in time.
+
+In Biodiversity data, bar charts can help to view density of different speices in pertiular year.
+
+![](Visulation_test_files\figure-markdown_github/bar.png) 
+
+
+**3.Polar Area Diagram**
+
+The function of Polar area Diagram is somewhat similar to 'temporal' function in 'bdvis'.
+
+Sometimes, time series data can be cyclical - a season in a year, time of the day, and so on. Polar area diagrams help represent the cyclical nature time series data.
+
+![](Visulation_test_files\figure-markdown_github/polar.png)
+
+
+
+##: Occurance Data
+
+Here we can use different visualizations to inspect occurance data. Here we find out which species, remark are more and which are less in numbers.
+
+
+> Some ways of visualizing Time Data are Discussed below:
+
+**Word Cloud**
+
+Word cloud is the way to visualize which category is more and which is less.
+
+![](Visulation_test_files\figure-markdown_github/wc.png)
+
