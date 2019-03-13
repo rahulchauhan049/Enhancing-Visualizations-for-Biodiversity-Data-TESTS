@@ -1,6 +1,10 @@
 ---
 title: "Different Visualizations for Biodiversity Data"
-output: html_document
+output:
+  html_document:
+    df_print: paged
+  pdf_document: default
+  word_document: default
 ---
 
 There are many visualizations availble in R which can be used to represent data in graphical manner.
@@ -70,9 +74,19 @@ Here we can use different visualizations to inspect occurance data. Here we find
 
 > Some ways of visualizing Time Data are Discussed below:
 
-**Word Cloud**
+**1.Word Cloud**
 
 Word cloud is the way to visualize which category is more and which is less.
 
 ![](Visulation_test_files\figure-markdown_github/wc.png)
 
+
+
+**2.Pie Chart**
+
+Pie charts are generally used to show proportional data in the form of slice of pie.
+
+Pie chart can be used to represent percentage of different species in biodiversity data.
+
+
+![](Visulation_test_files\figure-markdown_github/pie.png)
