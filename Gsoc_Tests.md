@@ -26,12 +26,13 @@ Download 10,000 GBIF’s occurrence records of Mammals in the U.S (georeferenced
 ``` r
 #Downloading data from GBIF using rgbif
 key <- name_backbone(name = "Mammalia")$usageKey
-mammals <-occ_search(taxonKey = key,country = 'US', limit = 10000)
+mammals <-occ_search(taxonKey = key,country = 'US', limit = 10000, hasCoordinate=TRUE, hasGeospatialIssue=FALSE, return = "data")
 
-# keeping only georeferenced records
+#Formating Downloaded Data
+mammals <- format_bdvis(mammals,source='rgbif')
 
-mammals_g <- mammals[!is.na(mammals$Latitude) & !is.na(mammals$Longitude),
-             c("Longitude", "Latitude")]
+# Another Database that contain only perticular Column like Longitude and Latitude
+mammals_g <- mammals[c("Longitude", "Latitude")]
 
 ```
 
